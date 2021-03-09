@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { Grid } from "@material-ui/core";
 
@@ -34,6 +34,11 @@ export default function Countdown() {
   const remainingTime = endTime - stratTime;
   const days = Math.ceil(remainingTime / daySeconds);
   const daysDuration = days * daySeconds;
+
+  useEffect(() => {
+    const RD = Math.floor(remainingTime / 86400);
+    document.title = RD + " days left";
+  });
 
   return (
     <div className="App">
