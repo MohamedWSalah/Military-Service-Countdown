@@ -1,5 +1,6 @@
 import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
+import { Grid } from "@material-ui/core";
 
 const minuteSeconds = 60;
 const hourSeconds = 3600;
@@ -7,8 +8,9 @@ const daySeconds = 86400;
 
 const timerProps = {
   isPlaying: true,
-  size: 120,
   strokeWidth: 6,
+  size: 120,
+  trailColor: "red",
 };
 
 const renderTime = (dimension, time) => {
@@ -35,59 +37,81 @@ export default function Countdown() {
 
   return (
     <div className="App">
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#000000"]]}
-        duration={daysDuration}
-        initialRemainingTime={remainingTime}
-      >
-        {({ elapsedTime }) =>
-          renderTime("days", getTimeDays(daysDuration - elapsedTime))
-        }
-      </CountdownCircleTimer>
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#000000"]]}
-        duration={daySeconds}
-        initialRemainingTime={remainingTime % daySeconds}
-        onComplete={(totalElapsedTime) => [
-          remainingTime - totalElapsedTime > hourSeconds,
-        ]}
-      >
-        {({ elapsedTime }) =>
-          renderTime("hours", getTimeHours(daySeconds - elapsedTime))
-        }
-      </CountdownCircleTimer>
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[["#EF798A"]]}
-        duration={hourSeconds}
-        initialRemainingTime={remainingTime % hourSeconds}
-        onComplete={(totalElapsedTime) => [
-          remainingTime - totalElapsedTime > minuteSeconds,
-        ]}
-      >
-        {({ elapsedTime }) =>
-          renderTime("minutes", getTimeMinutes(hourSeconds - elapsedTime))
-        }
-      </CountdownCircleTimer>
-      <CountdownCircleTimer
-        {...timerProps}
-        colors={[
-          ["#004777", 0.33],
-          ["#F7B801", 0.33],
-          ["#A30000", 0.33],
-        ]}
-        duration={minuteSeconds}
-        initialRemainingTime={remainingTime % minuteSeconds}
-        onComplete={(totalElapsedTime) => [
-          remainingTime - totalElapsedTime > 0,
-        ]}
-      >
-        {({ elapsedTime }) =>
-          renderTime("seconds", getTimeSeconds(elapsedTime))
-        }
-      </CountdownCircleTimer>
+      <h1 style={{ color: "white" }}>Military Service Countdown</h1>
+      <Grid container spacing={3} justify="center" alignItems="center">
+        <div className="space" style={{ backgroundColor: "red" }}>
+          <Grid item md={3} sm={3} xs={12}>
+            <CountdownCircleTimer
+              {...timerProps}
+              colors={[["#FFFFFF"]]}
+              duration={daysDuration}
+              initialRemainingTime={remainingTime}
+            >
+              {({ elapsedTime }) =>
+                renderTime("days", getTimeDays(daysDuration - elapsedTime))
+              }
+            </CountdownCircleTimer>
+          </Grid>
+        </div>
+
+        <div className="space" style={{ backgroundColor: "white" }}>
+          <Grid item md={3} sm={3} xs={12}>
+            <CountdownCircleTimer
+              {...timerProps}
+              colors={[["#000000"]]}
+              duration={daySeconds}
+              initialRemainingTime={remainingTime % daySeconds}
+              onComplete={(totalElapsedTime) => [
+                remainingTime - totalElapsedTime > hourSeconds,
+              ]}
+            >
+              {({ elapsedTime }) =>
+                renderTime("hours", getTimeHours(daySeconds - elapsedTime))
+              }
+            </CountdownCircleTimer>
+          </Grid>
+        </div>
+
+        <div className="space" style={{ backgroundColor: "white" }}>
+          <Grid item md={3} sm={3} xs={12}>
+            <CountdownCircleTimer
+              {...timerProps}
+              colors={[["#000000"]]}
+              duration={hourSeconds}
+              initialRemainingTime={remainingTime % hourSeconds}
+              onComplete={(totalElapsedTime) => [
+                remainingTime - totalElapsedTime > minuteSeconds,
+              ]}
+            >
+              {({ elapsedTime }) =>
+                renderTime("minutes", getTimeMinutes(hourSeconds - elapsedTime))
+              }
+            </CountdownCircleTimer>
+          </Grid>
+        </div>
+
+        <div className="space">
+          <Grid item md={3} sm={3} xs={12}>
+            <CountdownCircleTimer
+              {...timerProps}
+              colors={[
+                ["#FFFFFF", 0.33],
+                ["#808080", 0.33],
+                ["#FFFFFF	", 0.33],
+              ]}
+              duration={minuteSeconds}
+              initialRemainingTime={remainingTime % minuteSeconds}
+              onComplete={(totalElapsedTime) => [
+                remainingTime - totalElapsedTime > 0,
+              ]}
+            >
+              {({ elapsedTime }) =>
+                renderTime("seconds", getTimeSeconds(elapsedTime))
+              }
+            </CountdownCircleTimer>
+          </Grid>
+        </div>
+      </Grid>
     </div>
   );
 }
