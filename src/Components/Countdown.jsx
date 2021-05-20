@@ -10,14 +10,14 @@ const timerProps = {
   isPlaying: true,
   strokeWidth: 6,
   size: 120,
-  trailColor: "red",
+  trailColor: "#FFFFFF",
 };
 
 const renderTime = (dimension, time) => {
   return (
     <div>
       <div className="time">{time}</div>
-      <div>{dimension}</div>
+      <div style={{ color: "white" }}>{dimension}</div>
     </div>
   );
 };
@@ -42,13 +42,12 @@ export default function Countdown() {
 
   return (
     <div className="App">
-      <h1 style={{ color: "white" }}>Military Service Countdown</h1>
       <Grid container spacing={3} justify="center" alignItems="center">
-        <div className="space" style={{ backgroundColor: "red" }}>
+        <div className="space">
           <Grid item md={3} sm={3} xs={12}>
             <CountdownCircleTimer
               {...timerProps}
-              colors={[["#FFFFFF"]]}
+              colors={[["#000000"]]}
               duration={daysDuration}
               initialRemainingTime={remainingTime}
             >
@@ -59,7 +58,7 @@ export default function Countdown() {
           </Grid>
         </div>
 
-        <div className="space" style={{ backgroundColor: "white" }}>
+        <div className="space">
           <Grid item md={3} sm={3} xs={12}>
             <CountdownCircleTimer
               {...timerProps}
@@ -77,7 +76,7 @@ export default function Countdown() {
           </Grid>
         </div>
 
-        <div className="space" style={{ backgroundColor: "white" }}>
+        <div className="space">
           <Grid item md={3} sm={3} xs={12}>
             <CountdownCircleTimer
               {...timerProps}
@@ -99,11 +98,7 @@ export default function Countdown() {
           <Grid item md={3} sm={3} xs={12}>
             <CountdownCircleTimer
               {...timerProps}
-              colors={[
-                ["#FFFFFF", 0.33],
-                ["#808080", 0.33],
-                ["#FFFFFF	", 0.33],
-              ]}
+              colors={[["#000000"]]}
               duration={minuteSeconds}
               initialRemainingTime={remainingTime % minuteSeconds}
               onComplete={(totalElapsedTime) => [
