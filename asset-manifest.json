@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Military-Service-Countdown/static/css/main.14199007.chunk.css",
+    "main.js": "/Military-Service-Countdown/static/js/main.a431bc59.chunk.js",
+    "main.js.map": "/Military-Service-Countdown/static/js/main.a431bc59.chunk.js.map",
+    "runtime-main.js": "/Military-Service-Countdown/static/js/runtime-main.150e3c04.js",
+    "runtime-main.js.map": "/Military-Service-Countdown/static/js/runtime-main.150e3c04.js.map",
+    "static/js/2.e1eedb49.chunk.js": "/Military-Service-Countdown/static/js/2.e1eedb49.chunk.js",
+    "static/js/2.e1eedb49.chunk.js.map": "/Military-Service-Countdown/static/js/2.e1eedb49.chunk.js.map",
+    "static/js/3.0935b6b3.chunk.js": "/Military-Service-Countdown/static/js/3.0935b6b3.chunk.js",
+    "static/js/3.0935b6b3.chunk.js.map": "/Military-Service-Countdown/static/js/3.0935b6b3.chunk.js.map",
+    "index.html": "/Military-Service-Countdown/index.html",
+    "static/css/main.14199007.chunk.css.map": "/Military-Service-Countdown/static/css/main.14199007.chunk.css.map",
+    "static/js/2.e1eedb49.chunk.js.LICENSE.txt": "/Military-Service-Countdown/static/js/2.e1eedb49.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.150e3c04.js",
+    "static/js/2.e1eedb49.chunk.js",
+    "static/css/main.14199007.chunk.css",
+    "static/js/main.a431bc59.chunk.js"
+  ]
+}
