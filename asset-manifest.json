@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Military-Service-Countdown/static/css/main.750d6b22.chunk.css",
-    "main.js": "/Military-Service-Countdown/static/js/main.fe1e083a.chunk.js",
-    "main.js.map": "/Military-Service-Countdown/static/js/main.fe1e083a.chunk.js.map",
+    "main.js": "/Military-Service-Countdown/static/js/main.e2936523.chunk.js",
+    "main.js.map": "/Military-Service-Countdown/static/js/main.e2936523.chunk.js.map",
     "runtime-main.js": "/Military-Service-Countdown/static/js/runtime-main.f7effe91.js",
     "runtime-main.js.map": "/Military-Service-Countdown/static/js/runtime-main.f7effe91.js.map",
     "static/js/2.3346e786.chunk.js": "/Military-Service-Countdown/static/js/2.3346e786.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f7effe91.js",
     "static/js/2.3346e786.chunk.js",
     "static/css/main.750d6b22.chunk.css",
-    "static/js/main.fe1e083a.chunk.js"
+    "static/js/main.e2936523.chunk.js"
   ]
 }
